@@ -1,17 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { AppNavComponent } from './app-nav/app-nav.component';
+import { HomeComponent } from './home/home.component';
+import 'hammerjs';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { PricingsComponent } from './pricings/pricings.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AppNavComponent,
+    HomeComponent,
+    PricingsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MDBBootstrapModule.forRoot()
   ],
+  schemas: [ NO_ERRORS_SCHEMA ],
   providers: [],
   bootstrap: [AppComponent]
 })
